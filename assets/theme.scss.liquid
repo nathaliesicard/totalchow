@@ -1085,7 +1085,7 @@ select {
   font-size: em(18px);
   border-color: transparent;
   background-color: $colorInputBg;
-  color: color-control($colorInputBg);
+  color: black; /* Nath modified color-control($colorInputBg) */
   @include transition(opacity 0.4s ease-out);
 
   &[disabled],
@@ -1376,6 +1376,9 @@ a {
 .input-group .btn--secondary,
 .input-group .input-group-field {
   height: 45px;
+}
+.input-group .input-group-field {
+color: black;
 }
 
 /*================ Button loading indicator, when supported ================*/
@@ -1943,7 +1946,7 @@ $shareCountBg: $colorBody;
 .hero__text-content {
   opacity: 0;
   display: table-cell;
-  vertical-align: bottom;
+  vertical-align: middle; /* Nath modified */
   padding: 15px 30px 0;
   @include transition('color 0.2s ease');
 
@@ -3333,3 +3336,4 @@ button.mfp-arrow {
   width: 100%;
   z-index: 100;
 }
+

@@ -31,7 +31,7 @@
 
   <!-- CSS ================================================== -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  {{ 'nath.css' | asset_url | stylesheet_tag }}
   {{ 'timber.scss.css' | asset_url | stylesheet_tag }}
   {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
   {% include 'google-fonts' %}
@@ -555,7 +555,7 @@
           {% endif %}
 
           <div class="grid__item {{ footer_column_width }} {% if num_footer_columns == 1 %}text-center{% else %}large--text-right{% endif %}">
-            <p>&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: '/' }}<br>{{ powered_by_link }}</p>
+            <p>&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: '/' }}<br></p>
             {% unless shop.enabled_payment_types == empty %}
               <ul class="inline-list payment-icons">
                 {% for type in shop.enabled_payment_types %}
@@ -654,6 +654,8 @@
       {% include 'search-bar', search_btn_style: 'btn', search_bar_location: 'search-bar--modal' %}
     </div>
   {% endif %}
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 
 </body>
 </html>
