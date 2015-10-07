@@ -4,13 +4,6 @@
   For info on test orders:
     - General http://docs.shopify.com/manual/your-store/orders/test-orders
     - Shopify Payments - http://docs.shopify.com/manual/more/shopify-payments/testing-shopify-payments
-<style>
-
-  .paypal {
-    display: none
-  }
-  
-</style>
 
 {% endcomment %}
 <div class="grid">
@@ -149,7 +142,7 @@
               </button>
 
               {% if additional_checkout_buttons %}
-                <div class="additional_checkout_buttons">{{ content_for_additional_checkout_buttons }}</div>
+                <div style="display:none">{{ content_for_additional_checkout_buttons }}</div>
               {% endif %}
             </div>
           </div>
