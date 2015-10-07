@@ -1165,22 +1165,22 @@ input[type="image"] {
     appearance: textfield;
 
     &::-webkit-input-placeholder { /* WebKit browsers */
-      color: $colorTextBody;
+      color: lightgrey;
       opacity: 1;
     }
 
     &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-      color: $colorTextBody;
+      color: lightgrey;
       opacity:  1;
     }
 
     &::-moz-placeholder { /* Mozilla Firefox 19+ */
-      color: $colorTextBody;
+      color: lightgrey;
       opacity:  1;
     }
 
     &:-ms-input-placeholder { /* Internet Explorer 10+ */
-      color: $colorTextBody;
+      color: lightgrey;
     }
 
     @include at-query($min, $postSmall) {
@@ -3332,8 +3332,12 @@ button.mfp-arrow {
 /* Nath modified this */
 .header-wrapper {
   position: fixed;
-  background-color: rgba(40,52,61,0.9);
+  background-color: #1c1d1d;
   width: 100%;
   z-index: 100;
 }
 
+.header-wrapper a:hover {
+color: #c7ac7f;
+text-decoration: none;
+}
