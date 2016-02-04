@@ -493,3 +493,15 @@ theme.debounce = function(n,t,u){var e;return function(){var a=this,r=arguments,
 
 // Initialize theme's JS on docready
 $(theme.init);
+
+//Nath's
+// jQuery for page scrolling feature - requires jQuery Easing plugin
+$(function() {
+    $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
+});

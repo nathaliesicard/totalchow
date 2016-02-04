@@ -1929,6 +1929,7 @@ $shareCountBg: $colorBody;
 
 /*================ Hero text/CTA ================*/
 .hero__text-wrap {
+  margin-top: 420px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1947,7 +1948,8 @@ $shareCountBg: $colorBody;
   opacity: 0;
   display: table-cell;
   vertical-align: middle; /* Nath modified */
-  padding: 15px 30px 0;
+
+
   @include transition('color 0.2s ease');
 
   .slick-initialized & {
@@ -1984,11 +1986,12 @@ $shareCountBg: $colorBody;
 /*================ Font sizes ================*/
 .hero__slide {
   .hero__title {
-    font-size: em(50px);
+    font-size: em(25px);
+    font-family: 'Montserrat';
   }
 
   .hero__subtitle {
-    font-size: em(15px);
+    font-size: em(20px);
   }
 
   @include at-query($min, $postSmall) {
@@ -2700,7 +2703,7 @@ $slick-opacity-not-active: 0.25;
 }
 
 .mfp-img {
-  background-color: $colorBody;  
+  background-color: $colorBody;
 }
 
 button.mfp-close {
@@ -3176,7 +3179,7 @@ button.mfp-arrow {
   font-size: em(42px);
   line-height: 1.25;
   text-transform: none;
-  letter-spacing: 0;  
+  letter-spacing: 0;
   text-rendering: optimizeLegibility;
 
   @include at-query($min, $postSmall) {

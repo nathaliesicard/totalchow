@@ -6,6 +6,7 @@
     - Shopify Payments - http://docs.shopify.com/manual/more/shopify-payments/testing-shopify-payments
 
 {% endcomment %}
+
 <div class="grid">
   <div class="grid__item large--five-sixths push--large--one-twelfth">
     {% if cart.item_count > 0 %}
@@ -15,6 +16,8 @@
       </header>
 
       <form action="/cart" method="post" novalidate class="cart">
+
+
 
         <div class="cart__row medium-down--hide cart__header-labels">
           <div class="grid--full">
@@ -111,6 +114,34 @@
           </div>
         {% endfor %}
 
+
+        <h4>¡Completa el siguiente formulario
+          para que Santa realice tu video!</h4>
+
+        <p class="cart-attribute__field">
+          <label>Nombre del niño</label><br>
+          <select required class="required" id="nombre-del-nino" name="attributes[Nombre del niño]">
+            <option value="Juan"{% if cart.attributes["Nombre del niño"] == "Juan" %} selected{% endif %}>Juan</option>
+            <option value="Pedro"{% if cart.attributes["Nombre del niño"] == "Pedro" %} selected{% endif %}>Pedro</option>
+            <option value="Luis"{% if cart.attributes["Nombre del niño"] == "Luis" %} selected{% endif %}>Luis</option>
+            <option value="Arturo"{% if cart.attributes["Nombre del niño"] == "Arturo" %} selected{% endif %}>Arturo</option>
+            <option value="Eric"{% if cart.attributes["Nombre del niño"] == "Eric" %} selected{% endif %}>Eric</option>
+          </select>
+        </p>
+
+        <p class="cart-attribute__field">
+          <label for="escribe-el-nombre-del-ninoa-como-quieres-que-aparezca-en-el-video">Escribe el nombre del niño(a) como quieres que aparezca en el video:</label>
+          <input required class="required" id="escribe-el-nombre-del-ninoa-como-quieres-que-aparezca-en-el-video" type="text" name="attributes[Escribe el nombre del niño(a) como quieres que aparezca en el video]" value="{{ cart.attributes["Escribe el nombre del niño(a) como quieres que aparezca en el video"] }}">
+        </p>
+
+        <p class="cart-attribute__field">
+          <label>El motivo de este video es para:</label><br>
+          <input required class="required" type="radio" name="attributes[El motivo de este video es para]" value="Desear una Feliz Navidad"{% if cart.attributes["El motivo de este video es para"] == "Desear una Feliz Navidad" %} checked{% endif %}> <span>Desear una Feliz Navidad</span><br>
+          <input required class="required" type="radio" name="attributes[El motivo de este video es para]" value="Agradecerte por las galletas de la Navidad pasada"{% if cart.attributes["El motivo de este video es para"] == "Agradecerte por las galletas de la Navidad pasada" %} checked{% endif %}> <span>Agradecerte por las galletas de la Navidad pasada</span><br>
+          <input required class="required" type="radio" name="attributes[El motivo de este video es para]" value="Ver como se ha portado durante todo este año"{% if cart.attributes["El motivo de este video es para"] == "Ver como se ha portado durante todo este año" %} checked{% endif %}> <span>Ver como se ha portado durante todo este año</span><br>
+        </p>
+
+
         <div class="cart__row">
           <div class="grid--full cart__row--table-large">
             {% comment %}
@@ -142,7 +173,7 @@
               </button>
 
               {% if additional_checkout_buttons %}
-                <div style="display:none">{{ content_for_additional_checkout_buttons }}</div>
+                <div class="additional_checkout_buttons">{{ content_for_additional_checkout_buttons }}</div>
               {% endif %}
             </div>
           </div>
