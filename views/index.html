@@ -1,0 +1,74 @@
+{% extends "master.html" %}
+
+{% block embed %}
+
+<!-- Header -->
+<header>
+  <div class="container">
+    <div class="intro-text">
+      <div class="intro-lead-in">Comida inteligente</div>
+      <div class="intro-heading">del futuro</div>
+      <a href="#informacion" class="page-scroll btn btn-xl">Quiero saber más!</a>
+    </div>
+  </div>
+</header>
+
+<!-- Información Section -->
+<section id="informacion">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">¿Qué es TotalChow?</h2>
+        <br>
+        <h4 class="text-muted" style="text-transform: none; font-weight: 500px;">TotalChow es un alimento completo que puedes disfrutar al instante y contiene todos los nutrientes esenciales para el cuerpo humano. Este producto está inspirado en <a href="http://www.soylent.com/">Soylent</a>, y perfeccionado en México.</h4><br>
+        <h4 class="text-muted" style="text-transform: none; font-weight: 500px;">TotalChow no es un suplemento alimenticio ni un producto dietético. Es simplemente un <strong>super alimento nutritivo en polvo</strong>.</h4><br>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-spoon fa-stack-1x fa-inverse"></i>
+                    </span>
+        <h4 class="service-heading">Saludable</h4>
+        <p class="text-muted">TotalChow es nutrición saludable que te brinda la proporción diaria que necesitas de <strong>macronutrientes,</strong> <strong>vitaminas y minerales</strong>.</p>
+      </div>
+      <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-clock-o fa-stack-1x fa-inverse"></i>
+                    </span>
+        <h4 class="service-heading">Rápido</h4>
+        <p class="text-muted">Únicamente tardarás <strong>1 minuto </strong>para poder disfrutar una comida completa, al colocar tu TotalChow en un vaso con agua y mezclar.</p>
+      </div>
+      <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-dollar fa-stack-1x fa-inverse"></i>
+                    </span>
+        <h4 class="service-heading">Accesible</h4>
+        <p class="text-muted">Una comida completa de TotalChow te cuesta 65.00 MXN. Menos de lo que te cuesta una comida nutritiva y balanceada en el mercado.</p>
+      </div>
+    </div>
+    <br>
+    <div class="col-xs-4 col-xs-offset-4 text-center"><a href="/informacion" class="btn btn-info"> Conoce Más <i class="fa fa-info-circle"></i> </a></div>
+
+    <br />
+    <div class="row text-center" style="margin-top: 25px;">
+      <h4>¿Estás listo para probarlo?</h4><br />
+
+      <div class="col-xs-4 col-xs-offset-4 text-center"><a href="/comprar" class="btn btn-xl"> Comprar <i class="fa fa-shopping-cart"></i> </a></div>
+    </div>
+    <hr>
+
+    <h2 class="section-heading text-center">Próximamente: Espéralo</h2>
+
+  </div>
+</section>
+
+
+{% endblock %}
+
+{% block scripts %}
+<script src="js/cbpAnimatedHeader.js"></script>
+{% endblock %}
