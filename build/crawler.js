@@ -10,7 +10,7 @@ var File = require('vinyl');
 
 function getRoutes(cb) {
   co(function*() {
-    var routes = ['/', '/blog', '/comprar', '/contacto', '/error', '/error', '/faq', '/informacion', '/isomaltulosa', '/nosotros', '/nutricion-mexico', '/privacidad', '/recomendaciones-nutricionales', '/terminos'];
+    var routes = ['/', '/blog', '/comprar', '/contacto', '/error', '/faq', '/informacion', '/isomaltulosa', '/nosotros', '/nutricion-mexico', '/privacidad', '/recomendaciones-nutricionales', '/terminos', '/google7f5b260696ed6ec5.html'];
 
 
     return routes;

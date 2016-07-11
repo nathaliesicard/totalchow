@@ -42,7 +42,8 @@ var paths = {
   '/blog': 'blog',
   '/isomaltulosa': 'isomaltulosa',
   '/nutricion-mexico': 'nutricion-mexico',
-  '/recomendaciones-nutricionales': 'recomendaciones-nutricionales'
+  '/recomendaciones-nutricionales': 'recomendaciones-nutricionales',
+  '/google7f5b260696ed6ec5.html' : 'google7f5b260696ed6ec5'
 
 };
 
